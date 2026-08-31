@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface-altLight text-content-primaryLight dark:bg-surface-altDark dark:text-content-primaryDark font-sans antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full hover:bg-slate-400 dark:hover:bg-slate-600;
+}
+
+/* Reusable Surface Utilities */
+.glass-panel {
+  @apply bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-md border border-border-light dark:border-border-dark shadow-sm;
+}
+
+.glass-card {
+  @apply bg-surface-cardLight dark:bg-surface-cardDark border border-border-light dark:border-border-dark shadow-sm hover:shadow-md transition-all duration-200;
+}
+
+/* Micro-Animations & 3D Utility Classes */
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-float-subtle {
+  animation: float-subtle 6s ease-in-out infinite;
+}
+
+.card-3d-perspective {
+  perspective: 1000px;
+}
+
+.card-3d-body {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.15s ease-out;
+}

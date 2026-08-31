@@ -1,0 +1,109 @@
+# ==========================================
+# CodeAlpha-PMS - Master Root .gitignore
+# ==========================================
+
+# ------------------------------------------
+# Environment & Secrets (CRITICAL)
+# ------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+
+# ------------------------------------------
+# Python & Django (Backend)
+# ------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# SQLite & Local Database files
+*.sqlite3
+*.sqlite3-journal
+*.db
+
+# Django Media & Static collected files
+/backend/media/
+/backend/staticfiles/
+media/
+staticfiles/
+
+# Pytest / Coverage / Testing
+.cache
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+*.pydevproject
+
+# ------------------------------------------
+# Node.js & React / Vite (Frontend)
+# ------------------------------------------
+node_modules/
+/frontend/node_modules/
+dist/
+/frontend/dist/
+dist-ssr/
+build/
+.next/
+.out/
+
+# Package Manager Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# ------------------------------------------
+# Cloud & Deployment Artifacts
+# ------------------------------------------
+.vercel/
+/frontend/.vercel/
+/backend/.vercel/
+.railway/
+.serverless/
+.terraform/
+
+# ------------------------------------------
+# Operating System & IDE Files
+# ------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthmb.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDEs & Editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.bak
+*.tmp

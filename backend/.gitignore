@@ -1,0 +1,33 @@
+# Python & Django
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+
+# Databases
+*.sqlite3
+*.sqlite3-journal
+*.db
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# Media & Static Files
+media/
+staticfiles/
+
+# Cloud & Deployment
+.vercel/
+.railway/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
