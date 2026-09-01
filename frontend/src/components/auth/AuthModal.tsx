@@ -167,12 +167,6 @@ export const AuthModal: React.FC = () => {
     }
   };
 
-  const fillDemoAccount = (email: string, pass: string = 'Password123!') => {
-    loginForm.setValue('email', email);
-    loginForm.setValue('password', pass);
-    handleLoginSubmit({ email, password: pass });
-  };
-
   const handleSSOClick = (provider: string) => {
     setSsoModal(provider);
   };
@@ -421,45 +415,7 @@ export const AuthModal: React.FC = () => {
               </div>
             )}
 
-            {/* Quick Demo Accounts Pill Bar */}
-            {!isSignUp && (
-              <div className="mb-4 p-2.5 bg-blue-50/60 dark:bg-blue-950/40 border border-blue-200/70 dark:border-blue-800/60 rounded-2xl">
-                <div className="flex items-center justify-between mb-1.5 px-1">
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-blue-700 dark:text-blue-300 flex items-center gap-1">
-                    <Sparkles className="w-3 h-3 text-amber-500 fill-amber-500" />
-                    Quick 1-Click Demo Login:
-                  </span>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  <button
-                    type="button"
-                    onClick={() => fillDemoAccount('admin@pulse.com')}
-                    className="flex items-center justify-between px-2.5 py-1.5 bg-white dark:bg-slate-900 border border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-500 rounded-xl text-left transition shadow-xs group active:scale-95"
-                  >
-                    <div>
-                      <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                        Marcus Vance
-                      </div>
-                      <div className="text-[9px] text-slate-500 dark:text-slate-400">Admin Architect</div>
-                    </div>
-                    <ArrowRight className="w-3.5 h-3.5 text-blue-500 group-hover:translate-x-0.5 transition" />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => fillDemoAccount('sarah@pulse.com')}
-                    className="flex items-center justify-between px-2.5 py-1.5 bg-white dark:bg-slate-900 border border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-500 rounded-xl text-left transition shadow-xs group active:scale-95"
-                  >
-                    <div>
-                      <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                        Sarah Jenkins
-                      </div>
-                      <div className="text-[9px] text-slate-500 dark:text-slate-400">Frontend Spec</div>
-                    </div>
-                    <ArrowRight className="w-3.5 h-3.5 text-blue-500 group-hover:translate-x-0.5 transition" />
-                  </button>
-                </div>
-              </div>
-            )}
+
 
             {/* Form Body */}
             {!isSignUp ? (
